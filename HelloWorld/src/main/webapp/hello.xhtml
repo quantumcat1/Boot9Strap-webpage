@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+	<f:metadata>
+	    <f:viewParam name="user" value="#{tester.user}" />
+	</f:metadata>
+	<meta charset="UTF-8"/>
+	<link rel="shortcut icon" type="image/x-icon" href="#{request.contextPath}/resources/images/favicon.ico"/>
+        <title>Boot9strap badge verification</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700'/>
+        <style>
+            html, body {
+                height: 100%;
+            }
+
+            body {
+                background: #3F51B5;
+                text-align: center;
+                color: #fff;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: calc(1.75vw + 1.75vh);
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+            }
+
+            section {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            section:nth-child(1) {
+                background: #283593;
+                font-size: calc(2.5vw + 2.5vh);
+                font-weight: bold;
+            }
+
+            section:nth-child(3) {
+                background: #5C6BC0;
+                font-weight: bold;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        </style>
+</h:head>
+<h:body>
+	<section>Boot9strap badge verification</section>
+	<section>
+		<h:form rendered="#{empty tester.user}"><h:outputText value="You need to enter a user"/></h:form>
+		<h:form rendered="#{not empty tester.user}">
+		<img rendered="#{not empty tester.url}" src="#{tester.url}"/>
+		<h:outputText rendered="#{tester.verified}" value="#{tester.user} is a verified boot9strap day one installer! :-)"/>
+		<h:outputText rendered="#{!tester.verified}" value="#{tester.user} is not a verified boot9strap day one installer. :-("/>
+		<br/><h:graphicImage rendered="#{tester.verified}" library="images" name="badge_large.png" />
+		</h:form>
+		<p/><h:outputText value="There are #{tester.size} verified users!"/>
+	</section>
+	</h:body>
+</html>

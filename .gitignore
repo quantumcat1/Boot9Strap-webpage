@@ -1,0 +1,10 @@
+/HelloWorld.war
+/Servers/
+/Servers2/
+/RemoteSystemsTempFiles/
+/.recommenders/
+/.metadata/
+/HelloWorld/Procfile
+/HelloWorld/run.bat
+/HelloWorld/target/
+/HelloWorld/.settings/
