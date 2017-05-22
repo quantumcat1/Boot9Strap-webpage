@@ -348,7 +348,7 @@ public class Master
 		users.add("vt6446");
 		users.add("cooler9711");
 		users.add("kend09g");
-		users.add("Narilro");
+		users.add("WolfRoms");
 		users.add("AyanamiRei0");
 		users.add("touholic");
 		users.add("MrMann");
@@ -432,6 +432,26 @@ public class Master
 		users.add("ItsTheScallywag");
 		users.add("Sheimi");
 		users.add("noX1609");
+		users.add("bekzboo12");
+		users.add("m1geulpf");
+		users.add("Carlos_DobleC");
+		users.add("NichyXD");
+		users.add("TLNiles");
+		users.add("Inochi.noZenmai");
+		users.add("epickid37");
+		users.add("OutVolt");
+		users.add("ArugulaZ");
+		users.add("annson24");
+		users.add("Dennis G");
+		users.add("jt_1258");
+		users.add("Ridge");
+		users.add("rn_1604");
+		users.add("MashedPotatos");
+		users.add("CoolFangs");
+		users.add("Jasper Jackson");
+		users.add("nechigawara");
+		users.add("grubgrub");
+		users.add("elmis003");
 	}
 
 	public boolean isVerified (String user)
