@@ -70,9 +70,10 @@ public class Tester implements Serializable
 		if(!checked)
 		{
 			verified = master.isVerified(user);
+			String gravatar = master.getGravatar(user);
 			JSONObject obj = null;
 			try {
-				obj = jsonFromURL("https://en.gravatar.com/" + user + ".json");
+				obj = jsonFromURL("https://en.gravatar.com/" + gravatar + ".json");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
